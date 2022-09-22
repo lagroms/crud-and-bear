@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    position: relative;
+}
+
+.right_side_container {
+    height: 100%;
+}

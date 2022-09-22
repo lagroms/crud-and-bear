@@ -1,0 +1,21 @@
+.user_card {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid lightgray;
+    padding: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.user_card .left_side {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user_card button,
+.user_card span {
+    font-weight: bold;
+}

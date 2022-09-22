@@ -1,0 +1,17 @@
+.card {
+    border-radius: 8px;
+    border: 2px solid lightgray;
+    padding: 15px;
+    flex: 0 1 200px;
+}
+
+.card h5 {
+    margin: 0;
+}
+
+.card .data {
+    display: block;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 10px;
+}

@@ -1,0 +1,39 @@
+.table {
+    vertical-align: middle;
+
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+
+    outline: 1px solid var(--bs-border-color);
+}
+
+.table input[type="checkbox"] {
+    cursor: pointer;
+}
+
+.table > thead {
+    background-color: lightgray;
+}
+
+.table > tbody tr {
+    cursor: pointer;
+}
+.table > tbody tr:last-child {
+    border-color: transparent;
+}
+
+.icon {
+    height: 20px;
+    width: auto;
+    cursor: pointer;
+}
+
+.controls {
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    justify-content: flex-end;
+    gap: 10px;
+}

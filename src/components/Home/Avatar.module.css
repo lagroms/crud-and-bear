@@ -1,0 +1,21 @@
+.img_wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: lightgray;
+}
+
+.avatar {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.wrapper {
+    border-radius: 50%;
+    background-color: lightgray;
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
