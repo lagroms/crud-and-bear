@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import { Provider } from "react-redux";
 import configureStore from "redux-mock-store";
 
-const initialState = { isAuthenticated: false };
+const initialState = { user: {}, isAuthenticated: false };
 const mockStore = configureStore();
 let store;
 
