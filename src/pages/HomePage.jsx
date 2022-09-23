@@ -234,6 +234,12 @@ const HomePage = () => {
                         </div>
                     )}
 
+                    {!getUsersApi.loading && users.length === 0 && (
+                        <div className="text-center p-5">
+                            <b>There are no users here</b>
+                        </div>
+                    )}
+
                     {!getUsersApi.loading && users.length > 0 && (
                         <Table
                             data={filteredUsers}
