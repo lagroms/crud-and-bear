@@ -81,9 +81,11 @@ export const postUser = (data) =>
 
 export const deleteUser = (userId) =>
     new Promise((resolve, reject) => {
-        // if (!newUserIsValid) {
-        //     return setTimeout(() => reject(new Error("Can't add new user")), randomIntFromInterval(1000, 3000));
-        // }
+        const user = database.users.find((user) => user.id === userId);
+
+        if (!user) {
+            return setTimeout(() => reject(new Error("User doesn't exist !")), randomIntFromInterval(1000, 3000));
+        }
 
         setTimeout(() => {
             deleteUserFromDb(userId);

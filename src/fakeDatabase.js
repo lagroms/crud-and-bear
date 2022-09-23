@@ -36,9 +36,7 @@ export const deleteUserFromDb = (userId) => {
 
 export const editUserFromDb = (data) => {
     const userIndex = database.users.findIndex((user) => user.id === data.id);
-    console.log("INDEX >>", userIndex);
     if (userIndex > -1) {
-        console.log("USER >>", database.users[userIndex]);
         database.users[userIndex] = data;
     }
 };

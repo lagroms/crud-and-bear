@@ -10,6 +10,7 @@ import Header from "../components/Home/Header";
 import UserCard from "../components/Home/UserCard";
 import { createMemoryHistory } from "history";
 import { Router } from "react-router-dom";
+import { deleteUser, editUser, postUser } from "../api";
 
 configure({ adapter: new Adapter() });
 
@@ -66,5 +67,33 @@ describe("HomePage component", () => {
         userEvent.click(buttonElement);
 
         expect(history.location.pathname).toBe("/");
+    });
+
+    test("User successfuly created", async () => {
+        const response = await postUser({
+            id: "13",
+            email: "new_user@gmail.com",
+            first_name: "New",
+            last_name: "User",
+            avatar: "",
+        });
+
+        expect(response.status).toBe("success");
+    });
+
+    test("User successfuly edited", async () => {
+        const response = await editUser({
+            id: "6",
+            email: "edited@gmail.com",
+            first_name: "Edited",
+            last_name: "User",
+            avatar: "",
+        });
+        expect(response.status).toBe("success");
+    });
+
+    test("User successfuly deleted", async () => {
+        const response = await deleteUser("1");
+        expect(response.status).toBe("success");
     });
 });
