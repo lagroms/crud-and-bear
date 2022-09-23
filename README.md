@@ -1,5 +1,7 @@
 # CRUD & BEAR APP
 
+(2 contributors: both are my profiles)
+
 ## Features
 
 -   Login with form validation + check if user exists. Error message popup if user doesn't exist. To log in, enter "achji.remi@gmail.com" as email address.
